@@ -21,6 +21,7 @@
 		B05FE4DC1978370C00F748F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05FE4BE1978370B00F748F8 /* UIKit.framework */; };
 		B05FE4E41978370C00F748F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B05FE4E21978370C00F748F8 /* InfoPlist.strings */; };
 		B05FE4E61978370C00F748F8 /* LivrodeReceitasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B05FE4E51978370C00F748F8 /* LivrodeReceitasTests.m */; };
+		B0C4CE1F19796A8600CAF94D /* SGReceitas.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C4CE1E19796A8600CAF94D /* SGReceitas.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		B05FE4E11978370C00F748F8 /* LivrodeReceitasTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LivrodeReceitasTests-Info.plist"; sourceTree = "<group>"; };
 		B05FE4E31978370C00F748F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B05FE4E51978370C00F748F8 /* LivrodeReceitasTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivrodeReceitasTests.m; sourceTree = "<group>"; };
+		B0C4CE1D19796A8600CAF94D /* SGReceitas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGReceitas.h; sourceTree = "<group>"; };
+		B0C4CE1E19796A8600CAF94D /* SGReceitas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGReceitas.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				B05FE4C91978370C00F748F8 /* SGAppDelegate.h */,
 				B05FE4CA1978370C00F748F8 /* SGAppDelegate.m */,
 				B05FE4CC1978370C00F748F8 /* Main.storyboard */,
+				B0C4CE1D19796A8600CAF94D /* SGReceitas.h */,
+				B0C4CE1E19796A8600CAF94D /* SGReceitas.m */,
 				B05FE4CF1978370C00F748F8 /* SGViewController.h */,
 				B05FE4D01978370C00F748F8 /* SGViewController.m */,
 				B05FE4D21978370C00F748F8 /* Images.xcassets */,
@@ -251,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05FE4CB1978370C00F748F8 /* SGAppDelegate.m in Sources */,
+				B0C4CE1F19796A8600CAF94D /* SGReceitas.m in Sources */,
 				B05FE4D11978370C00F748F8 /* SGViewController.m in Sources */,
 				B05FE4C71978370C00F748F8 /* main.m in Sources */,
 			);
@@ -459,6 +465,7 @@
 				B05FE4EB1978370C00F748F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B05FE4EC1978370C00F748F8 /* Build configuration list for PBXNativeTarget "LivrodeReceitasTests" */ = {
 			isa = XCConfigurationList;
@@ -467,6 +474,7 @@
 				B05FE4EE1978370C00F748F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
