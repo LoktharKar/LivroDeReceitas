@@ -12,6 +12,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // para definir a cor do Status Bar em cor light (branco)
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    
     // Override point for customization after application launch.
     return YES;
 }

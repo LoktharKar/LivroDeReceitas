@@ -21,6 +21,7 @@
 		B05FE4DC1978370C00F748F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05FE4BE1978370B00F748F8 /* UIKit.framework */; };
 		B05FE4E41978370C00F748F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B05FE4E21978370C00F748F8 /* InfoPlist.strings */; };
 		B05FE4E61978370C00F748F8 /* LivrodeReceitasTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B05FE4E51978370C00F748F8 /* LivrodeReceitasTests.m */; };
+		B0AF9AA31979BE4900C2FA19 /* SGReceitasTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0AF9AA21979BE4900C2FA19 /* SGReceitasTableViewController.m */; };
 		B0C4CE1F19796A8600CAF94D /* SGReceitas.m in Sources */ = {isa = PBXBuildFile; fileRef = B0C4CE1E19796A8600CAF94D /* SGReceitas.m */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		B05FE4E11978370C00F748F8 /* LivrodeReceitasTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LivrodeReceitasTests-Info.plist"; sourceTree = "<group>"; };
 		B05FE4E31978370C00F748F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B05FE4E51978370C00F748F8 /* LivrodeReceitasTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivrodeReceitasTests.m; sourceTree = "<group>"; };
+		B0AF9AA11979BE4900C2FA19 /* SGReceitasTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGReceitasTableViewController.h; path = ../SGReceitasTableViewController.h; sourceTree = "<group>"; };
+		B0AF9AA21979BE4900C2FA19 /* SGReceitasTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SGReceitasTableViewController.m; path = ../SGReceitasTableViewController.m; sourceTree = "<group>"; };
 		B0C4CE1D19796A8600CAF94D /* SGReceitas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGReceitas.h; sourceTree = "<group>"; };
 		B0C4CE1E19796A8600CAF94D /* SGReceitas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGReceitas.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,11 +121,10 @@
 				B05FE4C91978370C00F748F8 /* SGAppDelegate.h */,
 				B05FE4CA1978370C00F748F8 /* SGAppDelegate.m */,
 				B05FE4CC1978370C00F748F8 /* Main.storyboard */,
-				B0C4CE1D19796A8600CAF94D /* SGReceitas.h */,
-				B0C4CE1E19796A8600CAF94D /* SGReceitas.m */,
 				B05FE4CF1978370C00F748F8 /* SGViewController.h */,
 				B05FE4D01978370C00F748F8 /* SGViewController.m */,
 				B05FE4D21978370C00F748F8 /* Images.xcassets */,
+				B0AF9A9D1979941100C2FA19 /* Classes */,
 				B05FE4C11978370B00F748F8 /* Supporting Files */,
 			);
 			path = LivrodeReceitas;
@@ -155,6 +157,17 @@
 				B05FE4E21978370C00F748F8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0AF9A9D1979941100C2FA19 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B0AF9AA11979BE4900C2FA19 /* SGReceitasTableViewController.h */,
+				B0AF9AA21979BE4900C2FA19 /* SGReceitasTableViewController.m */,
+				B0C4CE1D19796A8600CAF94D /* SGReceitas.h */,
+				B0C4CE1E19796A8600CAF94D /* SGReceitas.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0AF9AA31979BE4900C2FA19 /* SGReceitasTableViewController.m in Sources */,
 				B05FE4CB1978370C00F748F8 /* SGAppDelegate.m in Sources */,
 				B0C4CE1F19796A8600CAF94D /* SGReceitas.m in Sources */,
 				B05FE4D11978370C00F748F8 /* SGViewController.m in Sources */,

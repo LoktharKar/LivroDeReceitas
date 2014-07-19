@@ -7,6 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SGReceitas.h"
+
+@protocol SGViewControllerDelegate
+
+-(void) addReceita: (SGReceitas*) receita;
+
+@end
+
 
 @interface SGViewController : UIViewController
 
@@ -19,6 +27,10 @@
 @property (weak, nonatomic) IBOutlet UITextView *procedimentoBox;
 
 @property (weak, nonatomic) IBOutlet UISwitch *favoritoButton;
+
+@property (nonatomic) SGReceitas *receitas;
+
+@property (nonatomic) id delegate;
 
 - (IBAction)adicionarImagem:(id)sender;
 - (IBAction)adicionarReceita:(id)sender;

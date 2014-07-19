@@ -24,27 +24,11 @@
 @synthesize procedimentoBox;
 
 @synthesize favoritoButton;
+@synthesize receitas;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    NSData *receitaData = [[NSUserDefaults standardUserDefaults] objectForKey:@"receitaKeyobject"];
-    
-    SGReceitas *receita;
-    if(receitaData){
-        receita = [NSKeyedUnarchiver unarchiveObjectWithData:receitaData];
-        
-        self.tituloBox.text = receita.titulo;
-        self.categoriaBox.text = receita.categoria;
-        self.tempoBox.text = [receita.tempoDePreparacao stringValue];
-        self.avaliacaoBox.text = [receita.avaliacao stringValue];
-        self.porcoesBox.text = [receita.porcoes stringValue];
-        self.favoritoButton.on = receita.favorito;
-        self.ingredientesBox.text = receita.ingrediente;
-        self.procedimentoBox.text = receita.procedimento;
-    }
-    
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -52,21 +36,37 @@
 // Metodo que corre imediatamente antes da view aparecer
 - (void)viewWillAppear:(BOOL)animated{
     
+    [super viewWillAppear:animated];
+    
+    // caso já exista dados para o item escolhido parecem nos campos apropriados
+    if(receitas){
+        self.tituloBox.text = receitas.titulo;
+        self.categoriaBox.text = receitas.categoria;
+        self.tempoBox.text = [receitas.tempoDePreparacao stringValue];
+        self.avaliacaoBox.text = [receitas.avaliacao stringValue];
+        self.porcoesBox.text = [receitas.porcoes stringValue];
+        self.favoritoButton.on = receitas.favorito;
+        self.ingredientesBox.text = receitas.ingrediente;
+        self.procedimentoBox.text = receitas.procedimento;
+        
+        // para definir o titulo do navigator quando carregamos num item da lista
+        self.navigationItem.title = receitas.titulo;
+    }
 }
 
 // Metodo que corre imediatamente depois da view aparecer
 - (void)viewDidAppear:(BOOL)animated{
-    
+    [super viewDidAppear:animated];
 }
 
 // Metodo que corre imediatamente antes da view desaparecer
 - (void)viewWillDisappear:(BOOL)animated{
-    
+    [super viewWillDisappear:animated];
 }
 
 // Metodo que corre imediatamente depois da view desaparecer
 - (void)viewDidDisappear:(BOOL)animated{
-    
+    [super viewDidDisappear:animated];
 }
 
 
@@ -97,11 +97,11 @@
     receita.procedimento = self.procedimentoBox.text;
     // falta adicionar a imagem à gravacao....
     receita.favorito = self.favoritoButton.on;
+
+    if([[self delegate] respondsToSelector:@selector(addReceita:)]){
+        [[self delegate] addReceita:receita];
+    }
     
-    NSData *receitasData = [NSKeyedArchiver archivedDataWithRootObject:receita];
-    [[NSUserDefaults standardUserDefaults] setObject:receitasData forKey:@"receitaKeyobject"];
-    
-    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 // Metodo para adicionar uma imagem à receita
